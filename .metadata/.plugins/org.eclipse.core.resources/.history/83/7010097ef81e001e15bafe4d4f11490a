@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <link href="css/NewFile.css" rel="stylesheet" type="text/css"> -->
+<script src="../js/jquery-3.7.0.js"></script>
+<script src='validate4.js'></script>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+select, input[type=text], input[type=password], input[type="button"] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+	outline: none;
+	height: 40px;
+}
+
+select {
+	padding: 10px 15px 10px 15px;
+	vertical-align: bottom;
+}
+
+legend {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold
+}
+
+#id, #post1 {
+	width: 70%
+}
+
+#jumin1, #jumin2 {
+	width: 49%
+}
+
+#id+input, #post1+input {
+	width: 29%;
+	background: orange;
+	line-height: 10px;
+	vertical-align: bottom;
+}
+
+textarea {
+	width: 100%;
+	resize: none;
+	outline: none;
+	margin-top: 5px;
+	border : 2px solid lightgreen;
+}
+
+#email, #domain {
+	width: 33%
+}
+
+#sel {
+	width: 30%;
+	background: lightgray
+}
+
+.container2 {
+	border: 1px solid lightgray;
+	padding: 1.5% 1%;
+	word-spacing: 10px;
+	margin-bottom: 20px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+input[type=button]:hover {
+	opacity: 0.8;
+	cursor: pointer
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+.cancelbtn {
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+	float: left;
+	width: 50%;
+}
+
+
+body {
+	background-color: #474e5d;
+}
+
+#myform {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	width: 850px;
+	padding: 16px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+</style>
+<script>
+$(document).ready(function() {
+	// 폼 제출 이벤트 핸들러
+	$('#myform').submit(function(event) {
+		event.preventDefault(); // 기본 폼 제출 동작 방지
+
+		// 폼 유효성 검사 및 처리 로직 수행
+		if (validateForm()) {
+			// 폼이 유효한 경우 제출 진행
+			this.submit();
+		}
+	});
+
+	// ID 중복검사 버튼 클릭 이벤트 핸들러
+	$('#idCheck').click(function() {
+		var id = $('#id').val();
+		// ID 중복검사 로직을 여기에 수행
+		// 메시지를 표시하거나 ID 중복을 확인하기 위해 AJAX 요청을 수행할 수 있습니다.
+		alert(id + "의 중복검사를 수행합니다.");
+	});
+
+	// 도메인 선택 변경 이벤트 핸들러
+	$('#sel').change(function() {
+		var selectedDomain = $(this).val();
+		if (selectedDomain === '') {
+			$('#domain').prop('readonly', false);
+			$('#domain').val('');
+		} else {
+			$('#domain').prop('readonly', true);
+			$('#domain').val(selectedDomain);
+		}
+	});
+
+	// 우편검색 버튼 클릭 이벤트 핸들러
+	$('#postcode').click(function() {
+		// 우편번호 검색 로직을 여기에 수행
+		alert('우편번호 검색을 수행합니다.');
+	});
+});
+
+// 폼 유효성 검사 함수
+function validateForm() {
+	// 폼 유효성 검사 로직을 여기에 수행
+	// 폼이 유효한 경우 true를 반환하고, 그렇지 않으면 false를 반환합니다.
+	// 유효성 검사 메시지를 표시하거나 CSS 클래스를 적용하여 검증 오류를 표시할 수 있습니다.
+
+	var id = $('#id').val();
+	if (id.trim() === '') {
+		alert('ID를 입력해주세요.');
+		$('#id').focus();
+		return false;
+	}
+
+	var pass = $('#pass').val();
+	if (pass.trim() === '') {
+		alert('비밀번호를 입력해주세요.');
+		$('#pass').focus();
+		return false;
+	}
+
+	var jumin1 = $('#jumin1').val();
+	var jumin2 = $('#jumin2').val();
+	if (jumin1.trim() === '' || jumin2.trim() === '') {
+		alert('주민등록번호를 입력해주세요.');
+		$('#jumin1').focus();
+		return false;
+	}
+
+	// 다른 필드에 대한 추가적인 유효성 검사 로직을 추가할 수 있습니다.
+
+	return true; // 폼이 유효함
+}
+</script>
+</head>
+<body>
+	<form name="myform" method="get" action="send.html" id="myform">
+		<div class="container"></div>
+		<fieldset>
+			<legend>유효성 검사</legend>
+			<label for="id">ID</label>
+			<div>
+				<input type="text" placeholder="Enter id" name="id" id="id"> <input
+					type="button" value="ID중복검사" id="idCheck">
+			</div>
+
+			<label for="pass">Password</label> 
+			<input type="password" placeholder="비밀번호 입력" name="pass" id="pass">
+			
+			<label for="jumin1">주민번호</label>
+			<input type="text" placeholder="주민등록번호 앞자리" maxLength="6" name="jumin1" id="jumin1">
+			<b> - </b> 
+			<input type="text" placeholder="주민등록번호 뒷자리" maxLength="7"
+				name="jumin2" id="jumin2">
+				
+			<label for="email">E-Mail</label> 
+			<input type="text" name="email" id="email">@ 
+			<input type="text" name="domain" id="domain">
+			<select name="sel" id="sel">
+				<option value="">직접입력</option>
+				<option value="naver.com">naver.com</option>
+				<option value="daum.net">daum.net</option>
+				<option value="nate.com">nate.com</option>
+				<option value="gmail.com">gmail.com</option>
+			</select> <label>성별</label>
+			<div class="container2">
+				<!-- type="radio"는 readOnly가 작동하지 않아 onclick="return false"로 해결합니다. -->
+				<input type="radio" name="gender" value="m" id="gender1"
+					onclick="return false">남자 <input type="radio" name="gender"
+					value="f" id="gender2" onclick="return false">여자
+			</div>
+
+			<label>취미</label>
+			<div class="container2">
+				<input type="checkbox" name="hobby" id="hobby1" value="공부">공부
+				<input type="checkbox" name="hobby" id="hobby2" value="게임">게임
+				<input type="checkbox" name="hobby" id="hobby3" value="운동">운동
+				<input type="checkbox" name="hobby" id="hobby4" value="등산">등산
+			</div>
+			<label for="post1">우편번호</label>
+		<input type="text" size="50" maxLength="5" name="post1" id="post1">
+		<input type="button" value="우편검색" onclick="post()">
+
+		<label for="address">주소</label>               
+		<input type="text" size="50" name="address" id="address">
+		
+		<label for="intro">자기소개</label>
+		<textarea rows="10" name="intro" id="intro"></textarea>
+  	
+  		<div class="clearfix">
+		<button type="submit" class="signupbtn">회원가입</button>
+		<button type="reset" class="cancelbtn">취소</button>
+		</div>
+    	</fieldset>
+  	</form>
+			

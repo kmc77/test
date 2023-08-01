@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form handing with JavaScript</title>
+</head>
+<body>
+<script>
+	//"25,000,000원" => "25000000" 과정
+	var data = "25,000,000원";
+	
+	//"25,000,000원" => "25000,000원"
+	var data1 = data.replace(",","");
+	document.write(data+"=>" + data1 + "<hr>")
+	
+	/*
+		정규 표현식은 문자열에 나타나는 특정 문자 조합과 대응시키기 위해 사용되는 패턴입니다.
+	1. 만드는 방법
+		1) 형식
+			/pattern 형식 /[플래그]
+		2) 시작과 끝은 /를 사용
+		3) 플래그는 생략 가능
+		
+	2. replace(/,|원/,"")의미
+		1) data 문자열을 처음부터 한 글자씩 비교해서 ',' 또는 '원'이면 ""로 처음 한 번만 바꿉니다.
+		2) 플래그 g를 이용해서 문자열 처음부터 끝까지 적용하도록 합니다.
+	*/
+	var data2 = data.replace(/,|원/,"");
+	document.write(data + "=>" + data2+ "<hr>")
+	
+	//정규식을 이용
+	//g: 문자열 끝까지 적용
+	 var data3 = data.replace(/,|원/g,"");
+	document.write(data + "=>" + data3+ "<hr>")
+	
+	//정규식을 이용
+	//g: 문자열 끝까지 적용
+	 var data4 = "25/000/".replace(/\//g,"");
+	document.write("25/000/" + "=>" + data4+ "<hr>")
+	
+	var data5=25000000;
+	document.write(data5 + "=>" + data5.toLocaleString() + "<hr>")
+</script>
+
+
+</body>
+</html>

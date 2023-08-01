@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	/* 후손 선택자 
+		div 태그의 후손 li에 스타일이 적용되었습니다.
+	*/
+    $(document).ready(function() {
+    	$('div li').css('color', 'green');
+    });
+	</script>
+</head>
+<body>
+  <div>
+		<ul>
+			<li>Cat</li>
+			<li>Dog</li>
+			<li>Elephant</li>
+		</ul>
+	</div>
+	<div>
+		<p>아래는 적용하지 마세요</p>
+		<ul>
+			<li>고양이</li>
+			<li>개</li>
+			<li>코끼리</li>
+		</ul>	
+	</div>
+</body>
+</html>

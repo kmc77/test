@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using Objects</title>
+</head>
+<body>
+	<script>
+	
+		//객체 생성 방법
+		//1. new 연산자 이용하기
+		//var saram = new Object(); //사용자 정의 객체 생성
+		
+		//2. 객체 리터럴
+		//property는 콜론을 기준으로 키와 값의 쌍으로 작성
+		//property가 여러 개인 경우 콤마로 구분하여 작성
+		
+		var saram = {
+			'name' : "나최고",
+			"age" : 25,
+			ki : 170.2,
+			blood : 'A',
+			address : '서울시 강남구'
+		
+		};
+		
+		//출력 방법 1: 객체.속성이름
+		document.write(saram.name + "<br>");
+		document.write(saram.age + "<br>");
+		document.write(saram.ki + "<br>");
+		document.write(saram.blood + "<br>");
+		document.write(saram.address + "<br><hr>");
+		
+		
+		//출력 방법 3: 객체["속성이름"]
+		document.write(saram["name"] + "<br>");
+		document.write(saram["age"] + "<br>");
+		document.write(saram['ki'] + "<br>");
+		document.write(saram['blood'] + "<br>");
+		document.write(saram["address"] + "<br><hr>");
+		
+		
+		//출력 방법 4: for문 이용
+		//객체 saram의 모든 property 이름을 차례대로 p에 저장
+		for(var p in saram) {
+			document.write(p + ":" + saram[p] + "<br>")
+		}
+		
+	</script>
+</body>
+</html>

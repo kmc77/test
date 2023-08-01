@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>INDEX</title>
+<meta charset="UTF-8">
+
+<!--
+문서 객체 가져오기 (2)
+1. getElementsByName(namevalue)
+namevalue와 일치하는 태그의 name 속성을 가진 문서 객체 배열을 가져옵니다.
+
+2. getElementsByTagName(tagName)
+tagName과 일치하는 모든 태그의 문서 객체 배열을 가져옵니다.
+
+3. getElementsByClassName(className)
+className과 일치하는 class 속성을 가진 문서 객체 배열을 가져옵니다.
+
+4. querySelector(selector)
+선택자와 일치하는 첫 번째 문서 객체를 가져옵니다.
+
+5. querySelectorAll(selector)
+선택자와 일치하는 모든 문서 객체를 배열로 가져옵니다.
+
+-->
+<script>
+	window.onclick = function() {
+		//문서 객체를 가져옵니다.
+		var headers = document.getElementsByTagName('header');
+
+		//문서 객체의 스타일을 바꿔줍니다.
+		header.style.border = '2px solid black';
+		header.style.color = 'orange';
+		/*
+			CSS에서 background-color은 하으픈(-)없애고
+			끊겨진 단어의 첫 글자를 대문자로 변경하면 됩니다.
+			예) background-color -> backgroundColor
+		 */
+		header.style.backgroundColor = 'red';
+
+		//CSS에서의 속성 font-family => fontFamily
+		header.style.fontFamily = '굴림';
+
+	};
+</script>
+</head>
+<body>
+	<h1 id="header">Header</h1>
+</body>
+</html>

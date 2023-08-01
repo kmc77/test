@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	/* item 또는 select 클래스를 모두 가지는 태그 선택 */
+    $(document).ready(function() {
+    	$('.item, .select').css('color', 'orange');
+    });
+	</script>
+</head>
+<body>
+    <h1 class="items select">class="item select"</h1>
+    <h1 class="item select">class="item select" : 오렌지색 적용되요.</h1>
+     <h1 class="item">class="item"</h1>
+</body>
+</html>

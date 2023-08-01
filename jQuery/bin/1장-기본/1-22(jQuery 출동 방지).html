@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+	
+		.orange { background: orange; }
+		.append::before { content: '※' }
+		.append::after { content: '※' }
+		
+	</style>
+	<script src="../js/jquery-3.7.0.js"></script>
+	
+
+	<!--  
+		jQuery 외에 여러 플러그인 ( 특정 기능을 미리 프로그래밍한 제이쿼리 라이브러리 [https://jqueryui.com/draggable/]
+		을 사용할 때
+		$ 식별자가 충돌이 발생할 수 있습니다.
+		이런 충돌을 방지하기 위해 noConflict()메서드를 사용합니다.
+		그러면 더 이상 jQuery의 식별자로 $를 사용할 수 없습니다.	
+			  -->
+
+<script>
+	$noConflict(); //더 이상 jQuery의 식별자로 $를 사용할 수 없습니다.
+	const q = jQuery; //jQuery 객체를 다른 변수에 저장해서 사용합니다.
+	
+	//jQuery를 사용합니다.
+	p(document).ready(function(){
+		q('h1').addClass('append');//클래스 속성 추가
+	});
+</script>
+</head>
+<body>
+	<h1 class="orange">item - 0</h1>
+</body>
+</html>

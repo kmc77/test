@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+table {
+	margin: auto;
+	width: 400px;
+	text-align: center;
+}
+
+th {
+	background-color: lightpink;
+}
+</style>
+</head>
+<body>
+	<script>
+		// Constructor function
+		function Saram(name_value, age_value, ki_value, blood_value,
+				address_value) {
+			this.name = name_value;
+			this.age = age_value;
+			this.ki = ki_value;
+			this.blood = blood_value;
+			this.address = address_value;
+
+			this.display = function() {
+				document.write("<table>");
+				document.write("<caption>신상정보</caption>");
+				document.write("<tbody>");
+				document.write("<tr><th>항목 (속성: property)</th>");
+				document.write("<th>내용 (값: value)</th></tr>");
+
+				for ( var p in this) {
+					if (p !== "display") {
+						document.write("<tr>");
+						document.write("<td>saram." + p + "</td>");
+						document.write("<td>" + this[p]);
+						if (p == "age")
+							document.write("세");
+						if (p == "ki")
+							document.write("cm");
+						if (p == "bolld")
+							document.write("형");
+
+						document.write("</td></tr>");
+					}
+				}
+
+				document.write("</tbody></table>");
+			}
+			
+			
+			Saram.prototype.ban = 'L3반';
+			console.log(Saram.prototype.ban)
+
+			Saram.prototype.commonMethod = function() {
+			}
+
+		}
+		
+		Saram.prototype.commonMethod();
+		
+		// Create objects using constructor function
+		var na = new Saram("나최고", 25, 170.2, "A", "서울시 강남구");
+		na.display();
+
+		var you = new Saram("너최고", 35, 180, "B", "서울시 종로구");
+		you.display();
+	</script>
+</body>
+</html>

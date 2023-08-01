@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+div {
+	margin: 0 auto;
+	width: 500px
+}
+
+h3 {
+	background: #a4d7e4;
+	text-align: center;
+	width: 30%;
+	height: 3em;
+	line-height: 3em;
+}
+
+span {
+	color: red
+}
+
+textarea {
+	resize: none;
+}
+
+textarea:focus {
+	border: 2px solid green;
+	outline: none
+}
+</style>
+<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	// 이벤트를 연결합니다.
+	$(document).ready(function() {
+		//이벤트를 연결합니다.
+
+		$('button').click(function() {
+			//간단한 효과를 적용합니다.
+			//$('.page').slideToggle('slow');
+			$('.page').slideToggle(2000);
+
+
+			  // 남은 문자 수 업데이트하는 함수
+			  $('textarea').on('input', function() {
+			    var maxLength = parseInt($(this).attr('maxLength'));
+			    var remainingChars = maxLength - $(this).val().length;
+			    $('#remaining-chars').text('남은 문자 수: ' + remainingChars);
+
+			    // 남은 문자 수가 0 미만인지 확인
+			    if (remainingChars < 0) {
+			      $('#remaining-chars').addClass('exceeded');
+			    } else {
+			      $('#remaining-chars').removeClass('exceeded');
+			    }
+			  });
+			});
+</script>
+</head>
+<body>
+	<div>
+		<p>지금 내 생각을 150자로 정리하세요</p>
+		<h3>최대 150자</h3>
+		<textarea cols="70" rows="5" maxLength="150"></textarea>
+		<p id="remaining-chars"></p>
+	</div>
+</html>
+
+
+
+

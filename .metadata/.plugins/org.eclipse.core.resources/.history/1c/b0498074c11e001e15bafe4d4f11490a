@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <script src="../js/jquery-3.7.0.js"></script>
+   <!-- 
+  		너비와 높이, 투명도가 변화
+  	1. show() 	: 숨겨진 요소를 화면에 표시한다.
+  	2. hide() 	: 화면의 요소를 화면에서 표시하지 않게 한다.
+  	3. toggle() : show() 와 hide()를 반복한다.
+  	
+  	toggle(speed)메서드 :  show() 메서드와  hide()메서드를 번갈아 실행.
+  	speed:밀리초 단위의 숫자나 문자열 slow(600밀리초), normal(400밀리초), fast(200밀리초) 를 입력합니다.
+  	
+  	* 투명도 변화
+  	4. fadeIn() 	: 숨겨진 요소를 화면에 표시한다.
+  	5. fadeOut() 	: 화면의 요소를 화면에서 표시하지 않게 한다.
+  	6. fadeToggle() : fadeIn() 와 fadeOut()를 반복한다.
+  	
+  	* 높이 변화
+  	7. slideDown() 	: 숨겨진 요소를 화면에 표시한다.
+  	8. slideUp() 			: 화면의 요소를 화면에서 표시하지 않게 한다.
+    9. slideToggle(): slideDown() 와 slideUp()를 반복한다.
+    
+    -toggle은 두 함수를 반복하여 나타낸다.
+    -상태변화가 완료된 후에는 display 상태를 block 또는 none으로 변경한다.
+    -함수의 ()안에는 시간을 설정하여 사라지고 나타나는데 걸리는 시간을 설정할 수 있다.
+    	※ (1000) = 1초
+    -->
+<script>
+	// 이벤트를 연결합니다.
+	$(document).ready(function() {
+		//이벤트를 연결합니다.
+		$('button').click(function() {
+			//간단한 효과를 적용합니다.
+			//$('.page').show('slow');
+			$('.page').hide('slow');
+		});
+
+	});
+</script>
+</head>
+<body>
+	<button>hide</button>
+	<div class="page">
+		<h1>졸린가요?</h1>
+		<p>밤에 푹~ 주무세요</p>
+	</div>
+</body>
+</html>
+
+
+
+

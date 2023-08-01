@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+
+	<!--  
+		jQuery 입력 양식 필터 선택자(3) :
+		(1)요소:checked(체크되어 있는 입력 양식을 선택합니다.)
+		(2)요소:disabled(비활성화된 입력 양식을 선택합니다.)
+		(3)요소:enabled(활성화된 입력 양식을 선택합니다.)
+		(2)요소:focus(초점이 맞추어져 있는 입력 양식을 선택합니다.)
+		(3)요소:selected(option 객체 중 선택된 태그를 선택합니다.)
+	
+	 -->
+	 <!--  형식) attr() : 속성의 값을 구해오거나 값을 설정합니다.
+	 		1. attr(속성명) - 속성에 해당하는 속성값을 구해옵니다.
+	 		2. attr(속성명, 속성값) - 속성에 해당하는 속성값을 설정합니다.
+	 		3. attr(속성명, function(index, attrValue({})			
+	  -->
+
+<script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        const imagepath = $('input:checked').val();
+        alert("선택한 그림의 위치는 '" + imagepath + "' 입니다.");
+        $('img').attr('src', imagepath);
+      }, 5000)
+      
+    });
+  </script>
+</head>
+<body>
+	<h3>선택한 그림 위치 출력</h3>
+	<hr>
+	<div> radio 버튼을 클릭하세요 </div>
+	<form>
+	<img src="../image/koala.jpg" width="100px" height="100px"><br>
+  <input type="radio" name="icon"  value='../image/image1.png'>image1<br>
+  <input type="radio" name="icon"  value='../image/image2.png'>image2<br>
+  <input type="radio" name="icon"  value='../image/image3.png'>image3<br>
+  	</form>
+</body>
+</html>

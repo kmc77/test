@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+
+
+<!--  
+		특정 위치의 문서 객체 선택
+		eq() : 특정 위치에 존재하는 문서 객체를 선택합니다.
+		first() : 첫 번째 위치하는 문서 객체를 선택합니다.
+		last() : 마지막에 위치하는 문서 객체를 선택합니다.
+			  -->
+<style>
+* {
+	text-align: center
+}
+
+table {
+	margin: 0 auto;
+	width: 50%;
+	font-size: 20px;
+	border-collapse: collapse
+}
+
+tr {
+	height: 50px;
+	border-bottom: 1px solid gray;
+}
+
+tbody tr:hover {
+	background: orange;
+}
+
+caption {
+	color: green;
+	font-size: 30px;
+	font-weight: bold;
+}
+</style>
+
+<script>
+	/* 아이디 선택자 : 특정한 id 속성이 있는 문서 객체를 선택하는 선택자 */
+	$(document)
+			.ready(
+	
+	function() {
+		let xml = '<friends>';
+		xml += '<friend>';
+		xml += ' <name>오바마</name>';
+		xml += ' <language>영어</language>';
+		xml += '</friend>';
+		xml += '<friend>';
+		xml += '<name>하니</name>';
+		xml += ' <language>중국어</language>';
+		xml += '</friend>';
+		xml += '<friend>';
+		xml += ' <name>세종대왕</name>';
+		xml += ' <language>한국어</language>';
+		xml += '</friend>';
+
+		xml += '</friends>';
+
+		//변수를 선언합니다.
+		//문자열을 XML 문서 객체로 변경합니다.
+		const xmlDoc = $.parseXML(xml);
+
+		const inputName = prompt("친구 이름을 입력하세요");
+			let output = "<h1>친구가 명단에 없습니다.<h1>" ;
+		
+			 $(xmlDoc).find('friend').each(function(index) {
+				    if ($(this).find('name').text() == inputName) {
+				      output = '<table><caption>검색어: ' + inputName + '</caption>'
+				        + '<thead><tr><th>이름</th><th>언어</th></tr></thead><tbody>';
+
+				      output += '<tr>';
+				      output += ' <td>' + $(this).find('name').text() + '</td>';
+				      output += ' <td>' + $(this).find('language').text() + '</td>';
+				      output += '</tr>';
+				    }
+				  }); //each() end
+		
+		$("body").html(output);
+	}); //ready() end
+</script>
+</head>
+<body>
+
+</body>
+</html>

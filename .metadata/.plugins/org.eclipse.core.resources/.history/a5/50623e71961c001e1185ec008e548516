@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div{margin-bottom:2em;}
+</style>
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+	- 이벤트를 연결합니다.
+		1) on()메서드의 첫 번째 매개변수는 이벤트 이름이고(click)
+						두 번째 매개변수에 이벤트 발생시 실행할 코드를 작성합니다.
+		2) 여기서 사용된 this는 이벤트가 발생한 객체를 의미합니다.
+		3) div태그를 click이벤트에 연결하고 이벤트 발생 시 이벤트 발생 객체에 '♡' 를 추가합니다.				
+ -->
+<script>
+$(document).ready(function() {
+	$('div').on('click', function() {
+		 $(this).html(function(index, html) {
+			console.log("index=" + index + ", html=" + html)
+			return html + '♡';
+		});
+	});
+});
+</script>
+</head>
+  <body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

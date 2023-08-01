@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	/* 클래스 선택자와 특정 class 속성을 가지는 태그 선택자 */
+    $(document).ready(function() {
+    	$('.item').css('color', 'orange');
+    	
+    	//h1태그내 클래스가 item인 경우 선택
+    	$('h1.item').css('background', 'red');
+    });
+	</script>
+</head>
+<body>
+	<h2 class="item">나는~</h2>
+    <h1 class="item">졸리지</h1>
+    <h1 class="item">않아요</h1>
+    <h1> 전혀 졸리지 않아요</h1>
+</body>
+</html>

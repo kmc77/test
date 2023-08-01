@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event handling</title>
+<script>
+
+function myEvent(e) {
+	  var message = "The event type is " + e.type + ".\n";
+	  message += "The object (tag) that triggered the event is " + e.target.tagName + "\n";
+	  message += "The object currently firing the event is " + e.currentTarget.tagName + "\n";
+	  alert(message);
+	}
+
+	function add() {
+	  var a = document.getElementById('op1');
+	  var b = document.getElementById('op2');
+	//document.getElementById("result").value = a.value + b.value; //문자열 연결
+	  document.getElementById('result').value = parseInt(a.value) + parseInt(b.value);
+	}
+</script>
+
+</head>
+<body>
+
+<form>
+	<input id="op1" type="text" size="2"> +
+	<input id="op2" type="text" size="2"> 
+	<input type="button" value="=" onclick="add();"> 
+	<input id="result" type="text" size="2"> 
+</form>
+</body>
+</html>

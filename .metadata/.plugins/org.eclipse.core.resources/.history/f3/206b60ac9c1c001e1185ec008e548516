@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.reverse {
+	background: black;
+	color: white;
+}
+</style>
+<script src="../js/jquery-3.7.0.js"></script>
+
+<script>
+	$(document).ready(function() {
+		
+		/*
+		 * jQuery 로 이벤트를 연결하는 가장 기본적인 방법은 on() 메서드를 사용하는 것입니다.
+		 - on() 메서드의 두 가지 형태
+		 1. $(selector).on(eventName, function(event){})
+		 2. $(selector).on(object)
+		 
+		 - 이벤트를 연결합니다.
+		 1. mouseenter: 마우스가 객체 영역 안으로 진입하면 reverse 클래스 속성을 추가하고
+		 2. mouseleave: 마우스가 객체 영역 밖으로 빠져나가면  reverse 클래스 속성을 제거합니다.	 
+					
+		*/
+		
+		$('div').on({
+			mouseenter : function() {
+				$(this).addClass('reverse');
+			},
+			mouseenter : function() {
+				$(this).removeClass('reverse');
+		});
+	});
+</script>
+</head>
+  <body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

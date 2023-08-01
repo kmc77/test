@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt와 isNaN</title>
+</head>
+<!--
+1. prompt()함수를 이용해서 다음과 같이 입력받습니다.
+  
+    주문할 책 수량을 입력 하세요
+
+2. 1번에서 입력한 수 만큼 책 리스트에서 선택합니다.
+
+    var book1 = "자바스크립트";
+    var book2 = "HTML";
+    var book3 = "CSS";
+
+   책 제목을  번호로 선택하세요...
+   1. 자바스크립트
+   2. HTML
+   3. CSS
+
+3. 2번에서 선택한 목록이 테이블로 화면에 나타납니다.
+
+4. 2번에서 책 번호를 1~3 이외의 값을 입력하면 "리스트에 없는 책을 선택하셨습니다." 
+   라고 alert() 실행
+	
+	
+					  -->
+
+<body>
+
+
+	<script>
+		var book1 = "자바스크립트";
+	    var book2 = "HTML";
+	    var book3 = "CSS";
+		var n = prompt("주문할 책 수량을 입력하세요");
+	    
+		var output = "";
+
+		var output = "<table>";
+		var output = "<caption> 책 주문 입력 내용 </caption>";
+		var output = "<tbody>";
+		var output = "<tr>";
+		var output = "<th> 순번 </th> <th> 제목 </th>";
+		var output = "</tr>";
+		
+		for (var i = 0; i < Number(n); i++) {
+			var book_list = "1." + book1 + "\n" + "2." + book2 + "\n" + "3." + book3;
+			var choice = prompt("책 제목을 번호로 선택하세요...\n" + book_list, "1");
+		
+		//choice와 대응하는 case를 판별할 때는 일치 연산자 (===) 가 사용됩니다.	
+		//자료형과 값이 일치해야 합니다.
+		switch (choice) {
+		case "1":
+			title = book1;
+			break;
+		case "2":
+			title = book2;
+			break;
+		case "3":
+			title = book3;
+			break;
+		default:	
+			alert("리스트에 없는 책을 선택하셨습니다.");
+			i--;
+			continue;
+		}
+		
+		output += "<tr>";
+		output += "<td>" + (i+1) + "</td>";
+		output += "<td>" + title + "</td>";
+		output += "</tr>";
+		}
+		
+		output += "</tbody></table>";
+		
+		document.body.innerHTML = output;
+		
+	</script>
+</body>
+</html>
+
+

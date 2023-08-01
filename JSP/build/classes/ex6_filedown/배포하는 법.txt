@@ -1,0 +1,33 @@
+*빌드 : 소스코드를 실행 가능한 소프트웨어 산출물로 만드는 일련의 과정입니다.
+
+*배포(Deployment) : 실행 가능한 파일을 서버에 올려 사용자가 이용할 수 있게 하는 것입니다.
+
+프로젝트 배포법
+
+1. 프로젝트이름에서 우클릭
+
+2. Export -> war파일 선택
+   참고)
+   war(Web Archive)
+   웹 컨테이너에 배포되는 배포 형식으로 Servlet, jar 파일과 WEB-INF 폴더에 있는 web.xml 파일로 구성됩니다.
+3. Destination에서 Browse를 클릭 후 저장할 폴더와 파일이름 선택
+   -   C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\JSP.war
+   -   Target runtime의 Optimize for a specific server runtime 선택
+   -   Overwrite existing file 선택
+   
+4. 이클립스 서버는 중지합니다.
+
+5. 한글 처리를 위해 설정합니다. 
+C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\server.xml에서
+   URIEncoding="euc-kr"를 추가합니다.
+    <Connector port="8088" protocol="HTTP/1.1"
+                   connectionTimeout="20000"
+                   redirectPort="8443" 
+                   URIEncoding="euc-kr"/>
+
+ 
+6. C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin\Tomcat9w.exe를 클릭하고 서버를 가동합니다.
+  
+
+7. 브라우저에서 접근할 주소를 입력합니다.
+   http://localhost:8088/JSP/ex6_fileupload_download/_3.cos/ex2_2_name/fileUploadForm2.jsp   

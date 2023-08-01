@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Access</title>
+<meta charset="UTF-8">
+<!--
+	문서 객체 제거
+	removeChile(child) : 문서 객체의 자식 노드를 제거합니다.
+-->
+<script>
+	window.onclick = function() {
+		//getElementById()메서드를 이용해서 원하는 요소 객체에 접근할 수 있다.
+		var dom = document.getElementById("username");
+
+		//input 요소의 value속성값을 대화 상자에 보여줍니다.
+		alert(dom.value);
+
+		var newValue = prompt("이름을 입력하세요", "");
+
+		//dom.value에 newValue변수값 대입함으로써 <input>요소의 value속성 값을 변경시킬 수 있다.
+		dom.value = newValue;
+
+		dom.style.color = "red";
+		dom.style.background = "yellow";
+		dom.style.width = '200px';
+		dom.style.height = '50px';
+		dom.style['font-size'] = '30px';
+	};
+</script>
+</head>
+<body>
+	이름 :
+	<input id="username" type="text" value="사용자의 이름 :L3">
+</body>
+</html>

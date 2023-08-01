@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+
+<style>
+body * {
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		//선택한 요소의 다음 형제를 선택합니다.
+		$("h2").prev().css({	"color" : "red", "border" : "2px solid red"
+		});
+	});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+	<p>p</p>
+	<span>span</span>
+	<h2>나</h2>
+	<h3>h3</h3>
+	<h4>h4</h4>
+	<h5>h5</h5>
+	<p>p</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../js/jquery-3.7.0.js"></script>
+<style>
+.reverse {
+	background: black;
+	color: white;
+}
+</style>
+
+		<!-- 
+		hover()메서드 : mouseenter 이벤트와, mouseleave 이벤트를 동시에 연결합니다.
+		형식) $(selector).hover(function(event){},
+								function(event){});
+
+	 -->
+	
+<script>
+	
+		
+	
+	$(document).ready(function() {
+		//이벤트를 연결합니다.
+		$('div').hover(function() {
+			$(this).addClass('reverse');//mouseenter 이벤트
+		}, function() {
+			$(this).removeClass('reverse'); //mouseleave 이벤트
+		});//hover
+	});//ready
+</script>
+</head>
+  <body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

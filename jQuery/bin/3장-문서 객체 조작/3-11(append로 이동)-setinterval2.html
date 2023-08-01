@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* {
+	text-align: center
+}
+
+table {
+	margin: 0 auto;
+	width: 30%;
+	font-size: 20px;
+	border-collapse: collapse
+}
+
+tr {
+	height: 50px;
+	border-bottom: 1px solid gray;
+}
+
+tbody tr:hover {
+	background: orange;
+}
+
+caption {
+	color: green;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+tbody>tr:nth-child(1) {
+  background: pink;
+}
+</style>
+
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+	문서 객체 삽입
+	$(A).append(B) : B를 A의 마지막 자식에 추가합니다.
+ -->
+<script>
+
+
+$(document).ready(function() {
+	  setInterval(function() {
+	    $('tbody').append($('tbody>tr:first'));
+	  }, 1000);
+	});
+</script>
+</head>
+  <body>
+	<table>
+  	<caption>append - 이동</caption>
+  	<thead>
+  		<tr>
+  			<td>번호</td>
+  			<td>이름</td>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>1</td>
+  			<td>홍길동</td>
+  		</tr>
+  		<tr>
+  			<td>2</td>
+  			<td>이순신</td>
+  		</tr>
+  		<tr>
+  			<td>3</td>
+  			<td>손오공</td>
+  		</tr>
+  		<tr>
+  			<td>4</td>
+  			<td>저팔계</td>
+  		</tr>		
+  	    <tr>
+  			<td>5</td>
+  			<td>사오정</td>
+  		</tr>
+  	</tbody>
+  		</table>	
+</body>
+</html>

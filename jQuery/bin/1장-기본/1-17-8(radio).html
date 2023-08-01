@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+
+	<!--  
+		jQuery 입력 양식 필터 선택자(3) :
+		(1)요소:checked(체크되어 있는 입력 양식을 선택합니다.)
+		(2)요소:disabled(비활성화된 입력 양식을 선택합니다.)
+		(3)요소:enabled(활성화된 입력 양식을 선택합니다.)
+		(2)요소:focus(초점이 맞추어져 있는 입력 양식을 선택합니다.)
+		(3)요소:selected(option 객체 중 선택된 태그를 선택합니다.)
+	
+	 -->
+	 <!--  jQuery 배열 관리
+	 		jQuery로 배열을 관리할 때는 each ( ) 메서드를 사용합니다.
+	 		
+	 	- each ( ) 메서드는 일치하는 각각의 요소에 대해 매개변수로 작성한 함수를 실행합니다.
+	 	
+	 	- each ( ) 메서드는 다음과 같이 두 가지 형태로 사용합니다.
+	 		1. $(selector).each(function(index, item){})
+	 							첫번째 매개변수 - index(사용된 배열의 index)
+	 							두번째 매개변수 - item(index에 해당하는 요소)
+	 							
+	 		2. $.each(object, function(index, item){})						
+	  -->
+
+<script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        const imagepath = $('input:checked').val();
+        alert("선택한 그림의 위치는 '" + imagepath + "' 입니다.");
+      }, 5000)
+      
+    });
+  </script>
+</head>
+<body>
+	<h3>선택한 그림 위치 출력</h3>
+	<hr>
+	<div> radio 버튼을 클릭하세요 </div>
+	<form>
+  <input type="radio" name="icon"  value='../image/image1.png'>image1<br>
+  <input type="radio" name="icon"  value='../image/image2.png'>image2<br>
+  <input type="radio" name="icon"  value='../image/image3.png'>image3<br>
+  	</form>
+</body>
+</html>

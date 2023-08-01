@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div{margin-bottom:2em;}
+</style>
+<script src="../js/jquery-3.7.0.js"></script>
+
+<script>
+	$(document).ready(function() {
+		
+		$('div').click(function() {
+			$(this).html(function(index, html) {
+				console.log("index=" + index + ", html=" + html);
+				const moyang = ["★"];
+				const moyang1 = ["※"];
+				const moyang2 = ["♣️"];
+				return html += moyang;
+			});
+		});
+	});
+</script>
+</head>
+  <body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

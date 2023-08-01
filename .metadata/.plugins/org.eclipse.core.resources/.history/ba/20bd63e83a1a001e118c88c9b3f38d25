@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form handing with FavaScript</title>
+<link href="css/ex02061.css" rel="stylesheet" type="text/css">
+<style>
+th, td {
+	text-align: center;
+	border: 1px solid black;
+	padding: 5px;
+	width: 100px;
+}
+</style>
+</head>
+<div>
+	<h2>서적 주문 양식</h2>
+
+	<form action="result.html" method="get">
+		<!--  입력할 때 마다 변경됩니다. -->
+		<table>
+			<tr>
+				<th>책 제목</th>
+				<th>가격</th>
+				<th>수량</th>
+				<th>합계</th>
+			</tr>
+			<tr>
+				<td class="yellow">4차 산업</td>
+				<td class="price">30,000원</td>
+				<td><input id="book1" type="text" size="2" value="0"
+					onclick="this.select();"></td>
+				<!-- 이벤트 핸들러를 직접 기술하여 등록방식
+						this.select()는 각 서적 수량을 표시하는 텍스트 박스를
+						클릭하면 그 값이 선택되도록 하는 기능을 갖는다.
+						this는 <input>요소의 DOM을 가리키게 된다.
+						즉, 자신이 속한 DOM을 가리키는 것이다. -->
+				<td><input id="book1Total" type="text" size="6" value="0"
+					readOnly>원</td>
+			</tr>
+			<tr>
+				<td class="yellow">다이어트</td>
+				<td class="price">27,000원</td>
+				<td><input id="book2" type="text" size="2" value="0"
+					onclick="this.select();"></td>
+				<td><input id="book2Total" type="text" size="6" value="0"
+					readOnly>원</td>
+			</tr>
+			<tr>
+				<td class="yellow">윤식당</td>
+				<td class="price">25,000원</td>
+				<td><input id="book3" type="text" size="2" value="0"
+					onclick="this.select();"></td>
+				<td><input id="book3Total" type="text" size="6" value="0"
+					readOnly>원</td>
+			</tr>
+			<tr>
+				<td>합계</td>
+				<td>&nbsp;</td>
+				<td><input id="totalNumber" type="text" size="2" value="0"
+					readOnly></td>
+				<td><input id="totalPrice" type="text" size="6" value="0"
+					readOnly>원</td>
+			</tr>
+		</table>
+		<br> <input type="reset" value="초기화"> <input
+			type="submit" value="제출">
+	</form>
+</div>
+<script>
+	function calculateTotal(bookId, totalId) {
+		var quantity = parseInt(document.getElementById(bookId).value);
+		var price = parseInt(document.querySelector('#' + bookId + ' ~ .price').textContent
+				.match(/\d+/)[0]);
+		var total = quantity * price;
+
+		document.getElementById(totalId).value = total;
+	}
+
+	document.getElementById('book1').addEventListener('change', function() {
+		calculateTotal('book1', 'book1Total');
+	});
+
+	document.getElementById('book2').addEventListener('change', function() {
+		calculateTotal('book2', 'book2Total');
+	});
+
+	document.getElementById('book3').addEventListener('change', function() {
+		calculateTotal('book3', 'book3Total');
+	});
+</script>
+</body>
+</html>

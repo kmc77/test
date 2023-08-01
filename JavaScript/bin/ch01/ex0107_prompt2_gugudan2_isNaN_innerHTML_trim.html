@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt와 isNaN</title>
+</head>
+<!--
+0. var dan = prompt("단을 입력하세요?");
+1. 취소를 선택하는 경우 "취소를 누르셨군요" alert() 함수 실행
+2. 확인을 선택한 경우
+	1) 데이터 입력한 경우 - 숫자인지 판단하는 isNaN() 함수 사용
+						isNaN(value):value가 숫자가 아니면 true 리턴하고 숫자이면 false 리턴
+			(1) 숫자가 아닌 경우
+				'숫자만 입력 가능합니다.' alert() 함수 실행
+			(2) 숫자인 경우
+				입력 단 = 9
+				9*1=9
+				9*2=18
+				9*3=27
+				9*4=36
+				9*5=45
+				9*6=54
+				9*7=63
+				9*8=72
+				9*9=81
+	2) 데이터 입력하지 않은 경우 - "데이터를 입력하세요" alert() 함수 실행
+	
+				
+					  -->
+
+
+<body>
+
+
+	<script>
+		var dan = prompt("단을 입력하세요?");
+		var output = "";
+		if (dan == null) {
+			alert("취소를 누르셨군요")
+		} else {
+			if (dan.trim()) { //데이터를 입력한 경우, 공백 제거하는 메서드 trim() 사용
+				if (isNaN(dan)) { //isNaN(value):value가 숫자가 아니면 true 리턴
+									//숫자이면 false 리턴
+					alert('숫자만 입력 가능합니다.')
+				} else {
+					output = "입력 단 = " + dan + "<br>"
+					for (var i = 1; i <= 9; i++)
+						output += dan + '*' + i + '=' + i * Number(dan)
+								+ '<br>';
+
+					document.body.innerHTML = output;
+				}
+			} else {//데이터를 입력하지 않은 경우
+				alert('데이터를 입력하세요');
+			}
+		}
+	</script>
+</body>
+</html>
+
+

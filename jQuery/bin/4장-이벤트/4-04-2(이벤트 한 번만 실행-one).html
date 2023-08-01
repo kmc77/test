@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../js/jquery-3.7.0.js"></script>
+<style>
+div{margin:3em;}
+</style>
+
+	<!-- 
+		one() : 이벤트를 한 번씩만 실행합니다.
+	 -->
+	
+<script>
+	$(document).ready(function() {
+		let count=0;
+		//이벤트를 연결합니다.
+		$('div').one('click', function() {
+			$(this).html(function (index, html) {
+				return "<mark>이벤트가 발생했습니다.</mark>" + count++;
+			});
+			
+		});
+	}); 
+</script>
+</head>
+  <body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

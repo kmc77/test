@@ -1,0 +1,26 @@
+}
+
+td:first-child {
+	background-color: yellow;
+}
+
+tr:last-child {
+	background-color: green;
+}
+
+tr:last-child>td:first-child {
+	background-color: white;
+}
+
+table, th, td {
+	border: 1px solid gray
+}
+
+#book1:focus, #book2:focus, #book3:focus{
+	outline:none;
+	border: 2px solid red
+}
+
+tr:last-child input, #book1Total, #book2Total, #book3Total{
+	pointer-events: none;  /* 태그의 포커스를 받지 못하도록 합니다.*/
+}

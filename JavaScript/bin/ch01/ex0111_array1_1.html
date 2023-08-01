@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Array 객체 생성법
+     1. new 연산자 사용
+        var arr = new Array("one", 2, "3", 4, "five");
+     
+     2. 배열 리터널 이용  
+        var arr =  ["one", 2, "3", 4, "five"];   
+        
+     * 배열 내부의 데이터는 어떤 형(정수, 실수, 문자열, 불린, 객체, 함수)이든 입력이 가능합니다.
+     * 배열은 Array 객체 입니다.
+  -->
+<!-- Array() 생성자 함수의 매개변수에 따른 차이 
+     1. Array() : 빈 배열을 만듭니다.
+     2. Array(number) : number만큼 크기의 배열을 만듭니다.
+     3. Array(any, any, ..., any) : 매개변수를 배열로 만듭니다. 
+-->
+    <script>
+        // new 연산자를 이용해 배열을 생성합니다.
+        var array1 = new Array();
+        document.write("var array1 = new Array();의 자료형은  " + typeof array1 + "<br>");
+        // 출력합니다.    
+        // length : Array객체의 속성으로 배열 요소의 갯수를 의미합니다.
+        document.write("array1 배열 내용  : " + array1 + "<br>" 
+        		         + "  배열 크기  : "  + array1.length + "<hr>");
+        
+        
+        var array2 = new Array(5);
+        array2[0]=1;
+        array2[3]=10;
+        array2[4]=11;   
+        document.write(array2[1]+"<br>"); //undefined
+        document.write(array2[2]+"<br>"); //undefined
+        document.write("array2 배열 내용 : " + array2 + "<br>" 
+		               + " 배열 크기  : "    + array2.length +  "<hr>");
+        
+        
+        
+        
+        var array3 = new Array(273, 103, 57, 32);
+        document.write("array3 배열 내용 : " + array3 + "<br>" 
+		               + " 배열 크기  : "     + array3.length + "<hr>");
+        
+        
+        
+        
+        var array4 = [47, 273, 103, 52];
+        document.write("array4 배열 내용 :  " + array4 + "<br>" 
+		               + " 배열 크기  : "      + array4.length + "<hr>"); 
+        
+        
+        
+        
+        var array5 = new Array(1, 
+        		              '2', 
+        		              true, 
+        		              function (){alert('love5');} 
+                              );    
+        document.write("array5 배열 내용 :  " + array5 + "<br>" 
+        		        + " 배열 크기  : " 
+		                + array5.length + "<hr>");
+        array5[3](); 
+        
+        
+        
+        var array6 = 
+        	[
+        		 1,
+        		 '2',
+        		 true, 
+        		 function (){alert('love6');}, 
+        		 {},
+        	     ['A', 'B']
+          ];
+        document.write("array6 배열 내용 : " + array6.toString() + "<br>" + " 배열 크기  : " 
+		              + array6.length + "<hr>"); 
+        array6[3]();
+        document.write("array6[5]  : " + array6[5] +"<br>");
+        document.write("array6[5][0]  : " + array6[5][0] +"<br>");
+        document.write("array6[5][1]  : " + array6[5][1] +"<br>");  
+        document.write("array6[6]  : " + array6[6] +"<br>");
+        
+        </script>
+</head>
+<body>
+
+</body>
+</html>

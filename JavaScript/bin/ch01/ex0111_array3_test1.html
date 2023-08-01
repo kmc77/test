@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열로 리스트 만들기</title>
+<style>
+   ul>li{font-size:20px}
+   #red{color:red}
+  .green{color:green}
+  .bold{font-weight:bold; font-style:italic}
+  .yellow{color:yellow}
+</style>
+</head>
+<body>
+  <h3>비빔국수  재료</h3>
+  <hr>
+  <script>
+     var itemlist = ['국수', '계란', '고추장', '김치', '오이'];
+     
+     var output = '<ul>';
+     output += '<li class="green bold">' + itemlist[0] + '</li>'
+     output += '<li class="yellow">'     + itemlist[1] + '</li>'
+     output += '<li id="red">'           + itemlist[2] + '</li>'
+     output += '<li id="red">'           + itemlist[3] + '</li>'
+     output += '<li class="green">'      + itemlist[4] + '</li></ul><hr>'
+     document.body.innerHTML +=  output;
+     
+  </script>
+</body>
+</html>

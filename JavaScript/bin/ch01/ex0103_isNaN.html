@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>자바스크립트 변수의 특성 : isNaN() 함수</title>
+<meta charset="UTF-8">
+<script>
+	
+	document.write("Number('') : " + Number('') + "<br>") //0
+	if(isNaN('')){ //isNaN('') => isNaN(0) => false
+		document.write("isNaN('') true 입니다. <br>");
+	} else {
+		document.write("isNaN('') false 입니다. <br>");
+	}
+	
+	if(isNaN('a')) {
+		document.write("isNaN('a') true 입니다. <br>");
+	} else {
+		document.write("isNaN('a') false 입니다. <br>");
+	}
+	
+	if(isNaN('1')){ //isNaN('1') => isNaN(1) => false
+		document.write("isNaN('1') true 입니다. <br>");
+	} else {
+		document.write("isNaN('1') false 입니다. <br>");
+	}
+	
+	if(isNaN(1)){
+		document.write("isNaN(1) true 입니다. <br>");
+	} else {
+		document.write("isNaN(1) false 입니다. <br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+

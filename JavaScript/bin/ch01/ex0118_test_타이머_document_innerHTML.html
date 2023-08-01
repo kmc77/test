@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#time {
+	font-size: 24px;
+}
+</style>
+</head>
+<body>
+	<p id="time"></p>
+
+	<script>
+		// 시간과 날짜를 업데이트하는 함수
+		function updateTime() {
+			var date = new Date(); // 현재 날짜와 시간을 가져옴
+			var year = date.getFullYear(); // 현재 연도를 가져옴
+			var month = date.getMonth() + 1; // 현재 월을 가져옴 (0-11)
+			var day = date.getDate(); // 현재 일을 가져옴 (1-31)
+			var hours = date.getHours(); // 현재 시간을 가져옴 (0-23)
+			var minutes = date.getMinutes(); // 현재 분을 가져옴 (0-59)
+			var seconds = date.getSeconds(); // 현재 초를 가져옴 (0-59)
+
+			// 날짜를 YYYY-MM-DD 형식으로 포맷팅
+			var dateString = year + "." + formatDigits(month) + "." + formatDigits(day);
+
+			// 시간을 오전/오후 시간:분:초 형식으로 포맷팅
+			var timeString = getAmPm(hours) + " " + formatDigits(hours % 12 || 12) + ":" + formatDigits(minutes) + ":" + formatDigits(seconds);
+
+			// 시간 표시 업데이트
+			document.getElementById("time").innerHTML = dateString + " " + timeString;
+		}
+
+		// 자릿수를 포맷팅하는 함수 (10 미만인 경우 앞에 0을 추가)
+		function formatDigits(digits) {
+			return digits < 10 ? " " + digits : digits;
+		}
+
+		// 오전/오후 표시를 가져오는 함수
+		function getAmPm(hours) {
+			return hours >= 12 ? "오후" : "오전";
+		}
+
+		// 1초마다 updateTime 함수 호출하여 시간 표시 업데이트
+		setInterval(updateTime, 1000);
+	</script>
+</body>
+</html>

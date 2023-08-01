@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>radio 객체에서 선택한 그림 출력</title>
+
+</head>
+<body>
+	<h3>select 객체에서 선택한 그림 출력</h3>
+	<hr>
+	<div> select를 선택하면 해당 이미지가 보입니다. </div>
+	<form>
+		<select id="icon" >
+			<option value="image/image1.png">image1</option>
+			<option value="image/image2.png" selected>image2</option>
+			<option value="image/image3.png">image3</option>
+		</select>
+		<img id='iconImg' src='image/image2.png'>
+</form>
+
+	<script>
+		function show() {
+			var img = document.getElementById('iconImg');
+			img.src = this.value;
+		}
+		var icon = document.getElementById('icon');
+		icon.addEventListener('change', show);
+	</script>
+</body>
+</html>

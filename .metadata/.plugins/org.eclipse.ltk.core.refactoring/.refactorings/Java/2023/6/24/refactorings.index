@@ -1,0 +1,172 @@
+1686528865799	Copy compilation unit
+1686528883014	Delete element
+1686528896380	Copy compilation unit
+1686529447193	Copy compilation unit
+1686529730875	Rename type 'FileWriterExample1'
+1686530143146	Copy compilation unit
+1686532702607	Copy package
+1686532745081	Rename package 'ex18_03__FileInputStream_FileOutputStream_test'
+1686535395390	Delete element
+1686536864906	Copy compilation unit
+1686537393791	Copy package
+1686537680873	Rename resource 'output2.dat'
+1686537739026	Delete element
+1686537763756	Copy package
+1686539092409	Copy compilation unit
+1686540569205	Rename package 'ex18_07_Buffered_test'
+1686546472076	Rename type 'BufferedReaderExample2_readLine'
+1686547190558	Copy compilation unit
+1686547553648	Copy compilation unit
+1686548145813	Copy compilation unit
+1686548172898	Rename type 'BufferedWriterExample1_write'
+1686548199215	Copy compilation unit
+1686548203915	Delete element
+1686548285675	Rename type 'FileWriterExample1'
+1686549139001	Copy compilation unit
+1686549937770	Copy compilation unit
+1686551382841	Copy compilation unit
+1686551992454	Copy compilation unit
+1686552498458	Copy compilation unit
+1686553731906	Copy compilation unit
+1686554125624	Copy compilation unit
+1686554802385	Copy package
+1686555031527	Delete elements
+1686555620625	Rename type 'FileExample2_1'
+1686555686359	Rename type 'FileExample2_2'
+1686555732261	Rename type 'FileExample2_3'
+1686555769390	Rename type 'FileExample2_4'
+1686556012151	Rename type 'FileExample2_3_삭제'
+1686556849050	Rename package 'ex18_10_File2'
+1686557491148	Rename compilation unit 'FileExample2_코알라.java'
+1686559213019	Rename type 'ObjectOutputExample1'
+1686559229533	Rename type 'ObjectOutputExample'
+1686559246089	Copy compilation unit
+1686615132813	Rename type 'ObjectInputExample1'
+1686615189266	Copy compilation unit
+1686616185897	Copy compilation unit
+1686616194770	Rename type 'ObjectOutputExample1'
+1686616767297	Copy package
+1686617075001	Copy compilation unit
+1686618393338	Copy package
+1686618422001	Rename type 'GoodsStock'
+1686620285279	Rename type 'ObjectInputExample1'
+1686620322865	Rename package 'ex19_02_Serialization_interface_test'
+1686620757477	Copy package
+1686621646390	Delete element
+1686622209684	Copy compilation unit
+1686622232061	Rename type 'ObjectOutputExample2'
+1686622640128	Copy compilation unit
+1686623845079	Copy package
+1686624254365	Copy package
+1686625336240	Delete element
+1686625633256	Rename compilation unit 'BufferedWriterExample1_write.java'
+1686626664825	Delete element
+1686626772175	Copy compilation unit
+1686626781433	Copy compilation unit
+1686626841688	Copy compilation unit
+1686627510424	Rename package 'ex19_08_Buffered_test'
+1686632654558	Copy compilation unit
+1686632925469	Rename type 'ObjectInputExample3'
+1686633511370	Rename type 'Student2_main_for_method'
+1686633556975	Delete element
+1686633559897	Delete element
+1686636741592	Copy compilation unit
+1686636762614	Rename type 'ServerExample1'
+1686638815572	Copy compilation unit
+1686638834333	Rename type 'ServerExample1'
+1686640019238	Rename package 'ex20_1.server'
+1686640098297	Copy compilation unit
+1686640106679	Rename type 'ClientExample1'
+1686640733724	Copy compilation unit
+1686640762092	Rename type 'ServerExample1'
+1686644762066	Copy compilation units
+1686703201812	Rename package 'ex20_4.Client'
+1686705566134	Move compilation unit
+1686705575121	Copy compilation units
+1686708940404	Copy compilation unit
+1686709053578	Copy compilation unit
+1686721042430	Copy compilation unit
+1686725395006	Copy compilation unit
+1686725424092	Rename type 'JDBCExample2_Oracle1_column_name_'
+1686727094179	Copy compilation unit
+1686727429382	Copy compilation unit
+1686727991872	Copy compilation unit
+1686728458423	Copy compilation unit
+1686730435610	Copy compilation unit
+1686787389058	Rename package 'ex21_3_select_test'
+1686787401820	Rename compilation unit 'DAO.java'
+1686787810754	Rename type 'JDBCExample2_Oracle1_column_name_goodsinfo'
+1686789020683	Copy package
+1686789029321	Rename package 'ex21_3_select_statement_method_list'
+1686789038226	Delete element
+1686793546984	Copy package
+1686794478096	Rename package 'ex21_2_select_statement_method_test'
+1686794711130	Rename type 'Test'
+1686795512437	Copy compilation unit
+1686795546939	Copy compilation unit
+1686796047571	Copy package
+1686798383840	Copy package
+1686798404332	Copy compilation unit
+1686798678994	Rename type 'JDBCExample3_Oracle2_where_scanner'
+1686799779795	Copy compilation unit
+1686800084774	Copy compilation unit
+1686800992603	Copy compilation unit
+1686805232442	Copy compilation unit
+1686806032709	Copy compilation unit
+1686806104332	Delete element
+1686806118017	Copy compilation unit
+1686807203597	Rename type 'JDBCExample4_Oracle_insert_Test'
+1686807303710	Copy compilation unit
+1686807584762	Rename type 'JDBCExample7_Oracle_delete'
+1686808174603	Copy package
+1686809584075	Rename type 'GoodsInfo'
+1686809685795	Delete element
+1686809691515	Copy compilation unit
+1686810132142	Rename type 'Test'
+1686810595725	Rename type 'Emp'
+1686810616217	Rename type 'GoodsInfo'
+1686811275545	Delete element
+1686813295497	Rename package 'ex21_2_statement_Search'
+1686873752045	Rename type 'CRUD'
+1686874007488	Rename type 'CRUD2'
+1686875338046	Copy compilation unit
+1686875552944	Copy compilation unit
+1686878295399	Delete element
+1686878380823	Delete element
+1686878386731	Copy compilation unit
+1686878401602	Delete element
+1686878407881	Copy compilation unit
+1686878414935	Delete element
+1686878418243	Copy compilation unit
+1686879325762	Rename type 'DAO'
+1686879329525	Copy compilation unit
+1686879579890	Delete element
+1686879585980	Copy compilation unit
+1686879652661	Copy compilation unit
+1686879740920	Delete element
+1686879859564	Rename type 'DAO1'
+1686881151795	Copy package
+1686881225555	Delete elements
+1686881313011	Rename package 'ex21_4_3_statement_Search_Test'
+1686881352975	Move compilation units
+1686881595509	Rename type 'CRUD3_search'
+1686882940632	Copy compilation unit
+1686891774378	Copy package
+1686891853372	Delete elements
+1686891879141	Rename type 'CRUD3_search'
+1686892723227	Rename package 'ex21_4_3_statement_Search3'
+1686892861962	Copy compilation unit
+1686892908973	Delete element
+1686892986445	Rename package 'ex21_4_select_statement_Test'
+1686893072243	Rename package 'ex21_3_select_statement_Test'
+1686895915113	Copy compilation unit
+1686896727772	Copy package
+1686896812183	Rename type 'JDBCExample_different_insert1_PreParedStatement'
+1686897160698	Rename type 'JDBCExample_different_insert2_PreParedStatement'
+1686897580801	Copy compilation unit
+1686899209630	Copy compilation unit
+1686900031685	Copy compilation unit
+1686901038417	Copy compilation unit
+1686902477032	Copy compilation unit
+1686903275301	Copy compilation unit
+1686903765251	Copy compilation unit

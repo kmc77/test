@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+		3. $(selector).attr(name, function(index, attr){});
+ -->
+ 
+<script>
+	$(document).ready(function() {
+		//img 태그의 속성 'width' 의 값을 200px 으로 설정합니다.
+		$('img').attr("width", 200);
+	}); 
+</script>
+</head>
+	<img src="../image/image1.png" alt="image1.png">
+	<img src="../image/image2.png" alt="image2.png">
+	<img src="../image/image3.png" alt="image3.png">
+</body>
+</html>

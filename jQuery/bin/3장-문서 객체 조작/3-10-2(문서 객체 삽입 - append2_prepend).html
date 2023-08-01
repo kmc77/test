@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+	문서 객체 삽입
+	$(A).append(B) : B를 A의 마지막 자식에 추가합니다.
+	형식) $(selector).append(content, content, . . .);
+ -->
+<script>
+	$(document).ready(function() {
+		//변수를 선언합니다.
+		const h1 = '<h1>화요일</h1>';
+		const h2 = '<h1>수요일</h1>';
+		const h3 = '<h1>월요일</h1>';
+		
+		//문서 객체를 추가합니다.
+		//h1, h2를 div 태그의 마지막 자식에 추가합니다.
+		$('div').append(h1, h2);
+		
+		//h3을 div 태그의 맨 처음 자식에 추가합니다.
+		$('div').prepend(h3);
+	});
+</script>
+</head>
+  <body>
+  <div>내 뒤에 붙거라</div>
+</body>
+</html>

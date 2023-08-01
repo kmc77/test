@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+	text() 메서드 : 문서 객체 내부의 글자와 관련된 기능을 수행합니다.
+	형식)
+	1. $(selector).text(); 	- 선택자의 텍스트 노드의 값을 가져옵니다.
+	2. $(selector).text(value); 	- 선택자의 텍스트 노드의 값을 변경합니다.
+	3. $(selector).text(function(index, text){});
+ -->
+<script>
+$(document).ready(function() {
+	const inputName = prompt("이름을 입력하세요");
+	const position = Number(prompt("위치를 입력하세요(1,2,3중 입력)"));
+	console.log(`position=${position}`)
+	
+	const selector = 'h1:eq(' + (position-1) + ')'
+	$(selector).text(inputName)
+	});
+		
+</script>
+</head>
+  <body>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+    <h1>Header-3</h1>
+</body>
+</html>

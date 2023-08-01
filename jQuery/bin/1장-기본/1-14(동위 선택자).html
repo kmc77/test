@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	/* li+li : <li> 태그 바로 뒤의 형제 <li> 태그를 선택 */
+    $(document).ready(function() {
+    	$('li + li').css('color', 'red');
+    });
+	</script>
+</head>
+<body>
+  <div>
+		<ul>
+			<li>Cat</li>
+			<li>Dog</li>
+			<li>Elephant</li>
+		</ul>
+	</div>
+	<div>
+		<p>아래는 적용하지 마세요</p>
+		<ul>
+			<li>고양이</li>
+			<li>개</li>
+			<li>코끼리</li>
+		</ul>	
+	</div>
+</body>
+</html>

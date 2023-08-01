@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+   <script src="../js/jquery-3.7.0.js"></script>
+ <style>
+ input {
+ 	width: 100px; height: 40px; color: white;
+ 	font-weight: bold;
+ 	border:none; outline:none;
+ }
+ 
+ input:hover {
+ 	opacity: 0.8; cursor: pointer
+ 
+ }
+ 
+ input:disabled:hover {
+ 	opacity: 1; cursor: not-allowed;
+ }
+ 
+ #start {
+ 	background: green
+ }
+ 
+ #start:disabled, #end:disabled {
+ 	 	background: gray
+ }
+ 
+ #end {
+ 	 	background: red
+ 	
+ }
+ 
+ 
+ </style>   
+    <!-- trigger() : 이벤트를 강제로 발생 시킵니다.
+    				형식) trigger(eventname)
+     -->
+    <script>
+        $(document).ready(function () {
+            // 이벤트를 연결합니다.
+            $('h1').click(function () {
+            	 $(this).html(function (index, html) {
+                	return html + '★';
+            	 });	
+            });
+            
+            const $end = $('#end');
+            const $start = $('#start');
+            
+            //문서가 로드되면 처음에는 #end를 disabled 상태로 만듭니다.
+            $end.attr('disabled', true)
+            
+            //트리거 시작버튼을 연속 클릭하면 트리거도 연속 발생해서 처음 클릭하면
+            //트리거 시작버튼 비활성화시켜 이벤트가 발생하지 않도록 합니다.
+            $start.click(function(event) {
+            	$start.attr('disabled', true).val('시작중....');
+            	$end.attr('disabled', false)
+            	repeat = setInterval(function() {
+            			$('h1:last').trigger('click');
+            	}, 1000);
+            	
+            });
+           
+            $end.click(function() {
+            	$start.attr('disabled', true).val('트리거 시작');
+            	$end.attr('disabled', false)
+            	clearInterval(repeat);
+            });
+        });
+    </script>
+</head>
+<body>
+	<h1>Start:</h1>
+	<h1>Start:</h1>
+	<input type="button" value="트리거 시작" id="start">
+	<input type="button" value="트리거 종료" id="end">
+</body>
+</html>
+
+
+
+

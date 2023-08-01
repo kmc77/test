@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event handling</title>
+<style>
+input {
+	outline: none;
+	box-sizing: border-box;
+	width: 50px;
+	height: 30px;
+}
+
+input:nth-child(1):focus {
+	border: 1px solid red;
+}
+
+input:nth-child(2):focus {
+	border: 1px solid green;
+}
+
+#cal {
+	width: 25px;
+}
+
+#result {
+	border: 2px solid orange;
+}
+
+.clicked {
+	background-color: orange;
+}
+</style>
+<body>
+	<input id="op1" type="text" size="2"> +
+	<input id="op2" type="text" size="2">
+	<input id="cal" type="button" value="=">
+	<input id="result" type="text" size="2">
+
+
+	<script>
+		//이벤트 핸들러 - 특정 이벤트가 발생했을 때 실행하고자 하는 자바스크립트 함수
+
+		function add() {
+			var a = document.getElementById('op1').value;
+			var b = document.getElementById('op2').value;
+
+			var sum = document.getElementById("result");
+			sum.value = parseInt(a) + parseInt(b); //parseInt() : 정수형으로 변환
+			sum.style.backgroundColor = 'orange';
+		}
+
+		var cal = document.getElementById('cal');
+		cal.addEventListener('click', add);
+
+		/*
+		1. 이벤트 리스너는 DOM 객체에서 이벤트가 발생할 경우 해당 이벤트 처리 핸들러를 추가할 수 있는 오브젝트입니다.
+		2. 이벤트가 발생하면 등록한 이벤트 처리 핸들러가 실행됩니다.
+		3. W3C의 표준 방법으로서 DOM 객체의 addEventListener() 메서드로 이벤트 핸들러를 등록할 수 있습니다.
+		형식) addEventListener(type, function_name, useCapture)
+		(1) type : 이벤트 타입을 나타내는 문자열로 'click', 'load', 'keydown' 등등
+		(2) function_name : 이벤트가 발생할 때 실행할 함수명
+		(3) useCapture : true 이면 이벤트 흐름 중 캡쳐 단계에서 실행될 이벤트 핸들러를 등록
+					 false 이면 버블 단계에서 실행될 이벤트 핸들러를 등록. 생략 가능하며 디폴트는 false
+					 예) addEventListener('click', changeflowerf)
+		 */
+	</script>
+	</body>
+</head>
+
+
+</html>

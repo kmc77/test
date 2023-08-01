@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+<script>
+	/* item 또는 select 클래스를 모두 가지는 태그 선택 */
+    $(document).ready(function() {
+    	//$('div > ul-first-child').css('color', 'red');
+    	//$('div > ul-first-child' > li').css('color', 'red'); //자손 선택자
+    	$('ul:nth-child(1)>li ').css('color', 'red');
+    });
+	</script>
+</head>
+<body>
+	<!--  
+		1. A E - A요소에 포함되어 있는 요소 중 E요소를 선택한다. (후손요소)
+		2. A>E - A요소의 바로 아래에 포함되어 있는 E요소를 선택한다. (자식요소)
+		3. A+E - A요소의 다음으로 나오는 E요소를 선택한다. (형제요소)
+	 -->
+
+  <div>
+		<ul>
+			<li>Cat</li>
+			<li>Dog</li>
+			<li>Elephant</li>
+		</ul>
+	</div>
+	<div>
+		<p>아래는 적용하지 마세요</p>
+		<ul>
+			<li>고양이</li>
+			<li>개</li>
+			<li>코끼리</li>
+		</ul>	
+	</div>
+</body>
+</html>

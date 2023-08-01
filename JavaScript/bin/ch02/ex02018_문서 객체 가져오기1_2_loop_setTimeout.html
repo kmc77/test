@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>INDEX</title>
+<meta charset="UTF-8">
+<!--  
+		1. setTimeout(function, millisecond) : 일정 시간후 함수를 한 번 실행합니다.
+		2. setInterval(function, millisecond) : 일정 시간마다 함수를 반복해서 실행합니다.
+		3. clearTimeout(id) : 일정 시간 후 함수를 한 번 실행하는 것을 중지합니다.
+		4. clearInterval(id) : 일정 시간 후 함수를 반복하는 것을 중지합니다.
+			여기서 id는 setTimeout()함수와 setInterval()함수를 사용하면
+			타이머 아이디를 리턴하는데 이 아이디를 매개 변수에 넣어주면 타이머를
+			정지할 수 있습니다.
+		
+		 -->
+</head>
+<body>
+	1초마다 이미지가 바뀝니다.
+	<br>
+	<img src="image/koala.jpg" id="flower" width="500px" height="500px">
+	<script>
+		/*
+			스크립트 작성 순서
+			1. 아이디가 flower인 문서객체를 가져옵니다.
+			2. var flowerlist = ['Hydrangeas.jpg', 'Jellyfish.jpg', 'Penguins.jpg', 'Desert.jpg', Chrysant.jpg]
+			3. var count=0; (0-1->2->3->4->5->6->7.....)
+			4. function change() 를 작성합니다.
+				이 함수에서는 이미지 객체의 속성 src의 값을 flowerlist를 참조하여 설정합니다.
+			5. 1초 마다 change()를 실행하도록 합니다.
+		 */
+
+		var changeflower = document.getElementById('flower');
+		var flowerList = [ 'Hydrangeas.jpg', 'Jellyfish.jpg', 'Penguins.jpg',
+				'Desert.jpg', 'Chrysant.jpg' ];
+		// 3. count 변수를 초기화합니다.
+		var count = 0;
+
+		// 4. change() 함수를 정의합니다.
+		function change() {
+			/*
+			var path = 'image/' + flowerlist[count%flowerlist.length];
+			count++;
+				인덱스 위치 0	1	2	3	4	0	1	2	3	4	0	1	2	3	4
+				count 	 0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+			*/
+			var path = 'image/' + flowerList[count++ % flowerList.length];
+			changeflower.src = path;
+		};
+
+		var start_time = setInterval(change, 1000);
+	</script>
+</body>
+</html>

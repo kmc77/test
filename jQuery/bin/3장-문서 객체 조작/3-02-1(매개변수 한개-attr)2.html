@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+		attr()메서드
+		1. $(selector).attr(name);
+		2. $(selector).attr(name, value);
+		3. $(selector).attr(name, function(index, attr){});
+
+
+ -->
+<script>
+	$(document).ready(function() {
+		console.log($('img').attr('src')); //첫번째 속성 값 가져옵니다.
+	});
+</script>
+</head>
+	<img src="../image/image1.png" alt="image1.png">
+	<img src="../image/image2.png" alt="image2.png">
+	<img src="../image/image3.png" alt="image3.png">
+</body>
+</html>

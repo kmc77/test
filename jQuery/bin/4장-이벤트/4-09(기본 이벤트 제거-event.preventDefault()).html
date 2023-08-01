@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+ <style>
+ 	* {
+ 		margin: 5px; padding: 5px;
+ 		border: 3px solid black;
+ 	}
+ 	 </style>   
+   <meta charset="utf-8"> 
+   <script src="../js/jquery-3.7.0.js"></script>
+<script>
+	$(document).ready(function() {
+		// a태그 클릭시 이동합니다.
+		// 이동을 막아주세요
+		$('a').click(function(event) {
+			$(this).css('background-color', 'blue');
+			event.preventDefault(); //a태그 이동 이벤트를 제거합니다.
+
+			//a태그를 클릭하면 이벤트 전달이 일어나지 않습니다.
+			event.stopPropagation(); //a태그 선택시 div태그의 이벤트 전달을 제거합니다.
+		});
+
+		$('div').click(function(event) {
+			$(this).css('background-color', 'orange');
+		});
+
+	});
+</script>
+</head>
+<body>
+	<div>
+		<a href="4-07(trigger()-이벤트 강제 발생)1_1.html">트리거 예제</a> div 태그
+	</div>
+</body>
+</html>
+
+
+
+

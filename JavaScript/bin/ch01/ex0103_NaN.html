@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>자바스크립트 변수의 특성 : NaN 과 Number() 함수</title>
+<meta charset="UTF-8">
+<script>
+	
+	var su = 100; 
+		alert(su);
+		
+	//Number('A')-다른 자료형을 숫자로 바꿀 때 사용하는 함수로 숫자로 구성된 문자가 아닌 경우 NaN 출력
+	var s = 'A';
+	alert("Number(" + s + ") : " + Number(s)); //NaN(Not aNumber)
+	
+	var digit = 100;
+	alert(Number(digit) + ", typeof Number(digit) :" + typeof Number(digit)); //number
+	
+	//Number(true)=>1, Number(false)=>0을 리턴
+	alert("Number(true) : " + Number(true));
+	alert("Number(false) : " + Number(false));
+	
+	
+	/*isNaN 함수는 주어진 값이 숫자로 변환될 수 있는지 여부를 
+	
+	  값이 숫자로 변환될 수 있다면 false를 반환합니다.
+	  값이 숫자로 변환될 수 없다면 true를 반환합니다.
+	*/
+	if(isNaN('10')){
+		alert("isNaN('10')")
+	} else {
+		alert("not isNaN('10')") //출력
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+

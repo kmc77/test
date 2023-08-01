@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>INDEX</title>
+<meta charset="UTF-8">
+<!--  문서 객체 가져오기(1)
+		getElementById(id속성값) : 태그의 id 속성값과 일치하는 문서 객체를 가져옵니다. -->
+<script>
+//window.onload = function() {
+	window.onclick = function() {
+	//문서 객체를 가져옵니다.	
+	var header1 = document.getElementById('header-1');
+	var header2 = document.getElementById('header-2');
+	
+	//문서 객체의 속성을 변경합니다.
+	header1.innerHTML = 'with getElementById() : 햇살이';
+	header2.innerHTML = 'with getElementById() : 좋아요';
+	};
+</script>
+</head>
+<body>
+	<h1 id="header-1">클릭해 보세요</h1>
+	<h1 id="header-2">클릭해 보세요</h1>
+</body>
+</html>

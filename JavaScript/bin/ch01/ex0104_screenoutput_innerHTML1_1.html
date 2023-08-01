@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML 속성</title>
+<style>
+table {
+	margin: 0 auto;
+	text-align: center
+}
+
+th:first-child {
+	width: 100px;
+	height: 50px;
+}
+
+th:last-child {
+	width: 500px;
+}
+
+td {
+	height: 40px
+}
+
+caption {
+	color: green;
+	font-size: 30px
+}
+
+tr:first-child {
+	background: #172917;
+	color: white;
+}
+
+
+tr:nth-child(2n) {
+	background: #539c53;
+}
+
+tr:hover {
+	background: orange
+}
+	
+</style>
+</head>
+<body>
+	<script>
+		var title1 = "대한민국 전국 맛집";
+		var title2 = "지적 대화를 위한 넓고 얕은 지식";
+		var title3 = "베스트셀러 절대로 읽지 마라.";
+		
+		var list = '';
+				
+		list += "<table>";
+		list += "<caption> 베스트셀러 </caption>";
+		list += "<tbody>";
+		list += "<tr>";
+		list += "<th> 순위 </th>";
+		list += "<th> 제목 </th>";
+		list += "</tr>";
+		list += "<tr> <td> 1 </td> <td> " + title1 + " </td </tr>";
+		list += "<tr> <td> 2 </td> <td> " + title2 + " </td </tr>";
+		list += "<tr> <td> 3 </td> <td> " + title3 + " </td </tr>";
+		list += "</tbody>";
+		list += "</table>";
+		
+		document.body.innerHTML = list;
+		
+	</script>
+	
+</body>
+</html>
+
+
+

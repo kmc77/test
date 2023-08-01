@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 
+	함수를 리턴하는 함수
+ -->
+
+<script>
+	//함수를 선언
+	function returnFumction() {
+		return function () {
+			alert('Hello Function .. !');
+		};
+	}
+	
+	//함수 호출 방법 1.
+	var result = returnFumction();
+	document.write(result); //result=function () { alert('Hello Function .. !'); };
+	result();
+	
+	//함수 호출 방법 2.
+	returnFunction()();
+	//returnFunction() 함수를 호출하면 함수가 리턴됩니다.
+	//리턴된 함수를 호출하기 위해 ()를 한번 더 사용합니다.
+	
+	//함수 호출 방법 3. : 즉시 실행 함수
+	(function () {
+		return function () {
+			alert('Hello Function 즉시.. !');
+		};
+	})()();
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

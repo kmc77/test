@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수를 이용한 setInterval()</title>
+<script>
+	function current() {
+		var today = new Date();
+		document.body.innerHTML = today.toLocaleString();
+	}
+	
+	setInterval(current, 1000);
+</script>
+</head>
+<body>
+	<h1>시간이 나타납니다.</h1>
+</body>
+</html>

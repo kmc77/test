@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 
+	실행 됨 : 함수 안에서 var로 사용된 변수는 지역 변수이므로 
+	함수 외부에서 사용할 수 없다
+	단, 함수안에서 var를 생략하면 전역 변수로 취급한다.
+ -->
+
+<script>
+	//함수를 선언
+	function test(name) {
+		output = 'Hello ' + name + ' .. !'; //global 변수
+		document.write(output);
+	}
+	
+	test('자바스크립드');
+	
+	//출력합니다.
+	alert(output);  
+</script>
+</head>
+<body>
+
+</body>
+</html>

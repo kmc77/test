@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.7.0.js"></script>
+	
+	<!--  
+		태그 선택자 : 특정한 태그를 선택하는 선택자
+	-->
+	
+<script>
+	$(document).ready(function () {  
+		$('h1:nth-child(2n+1)').css('color', 'orange');
+	});
+	</script>
+</head>
+<body>
+	<h1>나는 오렌지색 입니다.</h1>
+	<h1>나는 검정색 입니다.</h1>
+  	<h1>나는 오렌지색 입니다.</h1>
+  	<h1>나는 검정색 입니다.</h1>
+</body>
+</html>

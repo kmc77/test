@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체의 메소드 활용</title>
+</head>
+<body>
+	<h3></h3>
+	<hr>
+	<script>
+		/*
+		1. 객체는 속성들의 모임입니다.
+		
+		2. 각 속성(property)은 이름(name)과 값(value)의 조합으로 구성됩니다.
+		
+		3. 객체의 property 값이 함수 자료형인 경우 이 프로퍼티를 메서드(method)라고 합니다.
+		
+		4. 점 연산자 이용법
+			- 객체.property(속성) 이름 및 객체.메서드 방식으로 접근
+			예) saram.name = "나최고";
+			    saram.print();
+			    
+		5. 배열 표시 방식 대괄호([])이용법
+			- 객체["속성이름"] 또는 객체['속성이름']
+			  saram["name"] = "나최고";
+			  saram["name"] = "나최고";
+			  
+		6. 객체 생성 방법
+				하나) new 연산자 이용하기
+					예) var saram = new Object();
+					
+				둘) 객체 리터럴 {} 이용하기
+					예) var saram = {};
+					
+		7. 객체 속성 추가하는 방법
+		   객체 생성 후 속성을 추가하기 때문에 '동적으로 속성을 추가한다.' 라고 합니다.
+		   1단계) 객체 생성
+		   		 var saram = new Object();
+		   2단계) 속성 추가
+		   		 saram.name = '나최고';
+		   
+		8. 속성 삭제 방법 - delete
+				 delete saram.name;
+		*/
+	
+		//객체 생성 방법
+		//1. new 연산자 이용하기
+		var saram = new Object(); //사용자 정의 객체 생성
+		
+		//2.{ } 이용하기
+		//var saram = P{};
+		
+		//생성된 객체에 속성 추가하기
+		saram.name = "나최고";
+		saram.age = 25;
+		saram.ki = 170.2;
+		saram.blood = "A";
+		saram.address = "서울시 강남구";
+		
+		//출력 방법 1: 객체.속성이름
+		document.write(saram.name + "<br>");
+		document.write(saram.age + "<br>");
+		document.write(saram.ki + "<br>");
+		document.write(saram.blood + "<br>");
+		document.write(saram.address + "<hr>");
+		
+		//출력 방법 2: with 사용한 경우
+		//형식) with(객체){}
+		with(saram) {
+		document.write(name + "<br>");
+		document.write(age + "<br>");
+		document.write(ki + "<br>");
+		document.write(blood + "<br>");
+		document.write(address + "<hr>");	
+		}
+		
+		//출력 방법 3: 객체["속성이름"]
+		document.write(saram["name"] + "<br>");
+		document.write(saram["age"] + "<br>");
+		document.write(saram['ki'] + "<br>");
+		document.write(saram['blood'] + "<br>");
+		document.write(saram["address"] + "<hr>");
+		
+		//출력 방법 4: for문 이용
+		//객체 saram의 모든 property 이름을 차례대로 p에 저장
+		for(var p in saram) {
+			document.write(p + ":" + saram[p] + "<br>")
+		}
+		document.write("<hr>")
+		
+		//property 삭제
+		delete saram.address;
+		
+		//객체 saram의 모든 property 이름을 차례대로 변수 p(string형)에 저장
+		for(var p in saram) {
+			document.write(p + ":" + saram[p] + "<br>")
+		}	
+		
+		document.write("<hr>")
+		saram.name = "홍길동";
+		saram.ki = 175.3;
+		//객체 saram의 모든 property 이름을 차례대로 변수 p(string형)에 저장
+		for(var p in saram) {
+			document.write(p + ":" + saram[p] + "<br>")
+		}	
+		
+		document.write("<hr>")
+		saram.address="우리집";
+		for(var p in saram) {
+			document.write(p + ":" + saram[p] + "<br>")
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using Objects</title>
+</head>
+<style>
+	table {
+		margin: 0 auto;
+		width: 60%;
+		border-collapse: collapse;
+	}
+	
+	table th {
+		background-color: #FFC4EB;
+	}
+	
+	tr {
+		height: 2em;
+	}
+	
+	table th, td {
+		border: 1px solid #BDBDBD;
+		text-align: center
+	}
+	
+	caption {
+		font-size: 30px;
+		color: gerrn
+	}
+</style>
+<body>
+
+	<script>
+		//객체 생성 방법
+		//1. new 연산자 이용하기
+		//var saram = new Object(); //사용자 정의 객체 생성
+
+		//2. 객체 리터럴
+		//property는 콜론을 기준으로 키와 값의 쌍으로 작성
+		//property가 여러 개인 경우 콤마로 구분하여 작성
+		
+
+		var saram = {
+			'name' : "나최고",
+			"age" : 25,
+			ki : 170.2,
+			blood : 'A',
+			address : '서울시 강남구',
+			print : function() {
+				var list = '<table>';
+				list += "<caption> 신상 정보 </caption>";
+				list += "<thead>"
+				list += "<tr>";
+				list += "<th> 항목 (속성: property)</th>";
+				list += "<th> 항목 (값: value)</th>";
+				list += "</tr>";
+				list += "</thead>"
+				list += "<tbody>"
+				for ( var p in this) {
+					if (p !== 'print') {
+						list += "<tr>";
+						list += "<td> saram." + p + "</td>";
+						list += "<td> " + this[p];
+						if(p == 'age')
+							list += "세"
+						else if (p == 'blood')
+							list += "형"
+						else if (p == 'ki')
+							list += "cm"
+						
+						list += "</td></tr>";	
+					}//if
+				}//for
+				list += "</tbody></table>";
+				document.body.innerHTML = list;
+			}//print
+		}
+
+		saram.print();
+	</script>
+</body>
+</html>

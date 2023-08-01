@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+	문서 객체의 내부 추가 - html() 메서드
+	html() 메서드에서 사용된 함수의 두 번째 매개 변수 html은 index위치에 해당하는 요소의 내용입니다.
+ -->
+<script>
+	$(document).ready(function() {
+		$('div>div').first().remove(); //dov 의 자식 중 첫 번째 문서 객체를 제거합니다.
+	});
+</script>
+</head>
+  <body>
+    <h1>월요일</h1>
+    <h1>화요일</h1>
+    <h1>수요일</h1>
+</body>
+</html>

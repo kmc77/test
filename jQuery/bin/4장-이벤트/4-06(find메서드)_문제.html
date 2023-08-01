@@ -1,0 +1,49 @@
+﻿<!-- 4-6(find메서드).html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * { margin: 0px; padding: 0px }
+        div
+        {
+            margin: 5px; padding: 3px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+    <meta charset="utf-8"> 
+   <script src="../js/jquery-3.7.0.js"></script>
+    <!-- find()메서드를 사용한 경우 입니다. -->
+    <script>
+        $(document).ready(function () {
+            // 이벤트를 연결합니다.
+            $('div').click(function () {
+                // 변수를 선언합니다.
+                const header = $(this).find('h1').text();
+                const paragraph = $(this).find('p').text();
+
+                // 출력합니다.
+                alert(header + '\n' + paragraph);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header 1</h1>
+        <p>Paragraph1</p>
+    </div>
+    <div>
+        <h1>Header 2</h1>
+        <p>Paragraph2</p>
+    </div>
+    <div>
+        <h1>Header 3</h1>
+        <p>Paragraph3</p>
+    </div>
+</body>
+</html>
+
+
+
+

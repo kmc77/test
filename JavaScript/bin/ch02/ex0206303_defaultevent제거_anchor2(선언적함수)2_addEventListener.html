@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a태그 디폴트 이벤트 제거하기</title>
+<!-- 
+			
+ -->
+</head>
+<body>
+	<input id="hoho" type="text">
+	<br>
+	<a href="http://www.naver.com"> 입력 상자에 "하하"를 입력하면 네이버로 이동 안되요~</a>
+
+	<script>
+		function go() {
+			var inputText = document.getElementById("hoho");
+			
+			if (inputText.value == "하하") {
+				alert("이동할 수 없습니다.");
+				event.preventDefault();
+			}
+		}
+		//선택된 첫 번째 <a> 요소에 대해 'click' 이벤트를 처리하기 위해 go라는 함수를 등록합니다.
+		document.querySelector("a").addEventListener('click',go)
+	</script>
+
+</body>
+</html>

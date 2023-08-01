@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String 객체의 메소드 활용</title>
+<style>
+   @keyframes textColorAnimation {
+    	0% { color:white; }
+    	20% { color: red;  }
+    	40% { color: orange;  }
+    	60% { color: yellow; }
+    	80% { color: green; }
+    	100% { color: white; }
+    }
+
+div {
+	font-family: "굴림";
+	font-size: 10em;
+	text-align: center;
+	font-weight: bold;
+	animation: start 6s infinite;
+}
+</style>
+</head>
+
+<body>
+	<h3>String 객체의 메소드 활용</h3>
+	<hr>
+	<script>
+		//주민번호를 입력받아 남자와 여자에 따라 body 배경색을 설정합니다.
+		var jumin = prompt("주민번호를 입력하세요?", "810908-3234567");
+		if (jumin.length1 != 14) {
+			alert("주민번호의 길이는 14개 입니다.")
+		} else if (inNaN(jumin.substr(0.6))) {
+			alert("앞자리 형식을 확인하세요.");
+		} else if (jumin.substr(6, 1) != "-") {
+			alert("앞자리 입력 후 -을 입력하세요")
+		} else if (isNaN(jumin.substr(7, 7))) {
+			alert("뒷자리 형식을 확인하세요")
+		} else {
+			var test = jumin.substr(7, 1);
+			if (test == "1" || test == "3") {
+				document.body.innerHTML += "<div>남자</div>";
+				document.body.style.background = "#565698";
+			} else if (test == "2" || test == "4") {
+				document.body.innerHTML += "<div>여자</div>";
+				document.body.style.color = "pink";
+			}
+			check=true;
+		}
+		if(!check)
+			document.write()
+	</script>
+</body>
+</html>

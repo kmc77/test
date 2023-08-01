@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script src="../js/jquery-3.7.0.js"></script>
+<!-- 
+		css() 메서드 : 스타일과 관련된 모든 기능을 수행합니다.
+		형식
+		attr()메서드
+		1. $(selector).css(name);
+		2. $(selector).css(name, value);
+		3. $(selector).css(name, function(index, style){});
+ -->
+<script>
+
+	$(document).ready(function() {
+		//di모든 태그에 대해 같은 색상을 지정합니다.
+		$('div').css('color', 'red'); //color 속성에 red 값을 적용합니다.
+		});
+</script>
+</head>
+	<div>Div-0</div>
+	<div>Div-1</div>
+	<div>Div-2</div>
+</body>
+</html>

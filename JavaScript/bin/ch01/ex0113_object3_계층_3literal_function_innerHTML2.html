@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서적 정보</title>
+</head>
+<style>
+table {
+	margin: 0 auto;
+	width: 60%;
+	border-collapse: collapse;
+}
+
+table th {
+	background-color: #FFC4EB;
+}
+
+tr {
+	height: 2em;
+}
+
+table th, td {
+	border: 1px solid #BDBDBD;
+	text-align: center
+}
+
+caption {
+	font-size: 30px;
+	color: gerrn
+}
+</style>
+<body>
+
+
+	<script>
+		var book = {
+			title : "수미네 반찬",
+			publisher : "성안당",
+			author : "김수미",
+			price : 15300,
+			info : {
+				pages : 442,
+				date : "2010년 1월 30일",
+				ISBN10 : "8970506470",
+				size : "188*243mm"
+			}
+		};
+
+		book.print = function() {
+			var list = '<table>';
+			list += "<caption> 서적 정보 </caption>";
+			list += "<thead>"
+			list += "<tr>";
+			list += "<th> 항목 (속성: property)</th>";
+			list += "<th> 항목 (값: value)</th>";
+			list += "</tr>";
+			list += "</thead>"
+			list += "<tbody>"
+			for ( var p in this) {
+				if (p !== 'print') {
+					if (typeof (this[p]) != "object") {
+						list += "<tr>";
+						list += "<td> book. " + p + "</td>";
+						list += " <td> " + this[p];
+						if (p == 'price')
+							list += "원"
+						list += " </td>";
+						list += " </tr>";
+					} else {
+						for ( var q in this[p]) {
+							list += "<tr>";
+							list += "<td> book." + p + "." + q + "</td>";
+							list += "<td> " + this[p][q];
+							if (q == "pages")
+								list += "페이지";
+							list += "</td>";
+							list += "</tr>";
+						}//for q
+					}//else
+
+					//list += "</td></tr>";
+				}//if
+			}//for
+			list += "</tbody></table>";
+			document.body.innerHTML = list;
+		}//print
+
+		book.print();
+	</script>
+</body>
+</html>
